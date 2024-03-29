@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+  grafana:
+    ports:
+      - ${GRAFANA_PORT_EXPOSE}:3000
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD}
+      GF_AUTH_ANONYMOUS_ENABLED: 'true'
+      GF_USERS_ALLOW_SIGN_UP: 'false'
+      GF_ANALYTICS_CHECK_FOR_UPDATES: 'false'
+      GF_INSTALL_PLUGINS: 'grafana-clock-panel,marcusolsson-gantt-panel,michaeldmoore-scatter-panel,cloudspout-button-panel,grafana-image-renderer,marcusolsson-dynamictext-panel,agenty-flowcharting-panel,briangann-datatable-panel,volkovlabs-form-panel,mtanda-histogram-panel,marcusolsson-calendar-panel,yesoreyeram-infinity-datasource,yesoreyeram-boomtheme-panel,marcuscalidus-svg-panel,yesoreyeram-infinity-datasource,gapit-htmlgraphics-panel,volkovlabs-echarts-panel'
+    healthcheck:
+      test: curl -d "body=message" http://localhost:3033/?orgId=1 || exit 1
+      interval: 120s
+      # timout: 20s
+      retries: 5
+    build: ../bi
