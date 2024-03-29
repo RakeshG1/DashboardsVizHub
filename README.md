@@ -42,4 +42,4 @@ grafanabi_grafana   latest    bd0c3812a841   8 days ago      494MB
 # Shut down containers
 $ dc down
 ```
-![](docImages/Grafana_BI_Welcome_Page_.png)
+![](DocImages/Grafana_BI_Welcome_Page_.png)
