@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Player1",
+        "type": "Batsman",
+        "networth": 10000,
+        "no. of matches": 100
+    },
+    {
+        "name": "Player2",
+        "type": "Bowler",
+        "networth": 11000,
+        "no. of matches": 90
+    },
+    {
+        "name": "Player3",
+        "type": "Batsman",
+        "networth": 9000,
+        "no. of matches": 6
+    },{
+        "name": "Player4",
+        "type": "Bowler",
+        "networth": 80000,
+        "no. of matches": 30
+    },
+    {
+        "name": "Player5",
+        "type": "Batsman",
+        "networth": 75000,
+        "no. of matches": 50
+    }
+]
